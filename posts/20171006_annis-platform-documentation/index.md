@@ -1,6 +1,5 @@
 ---
-permalink: ANNIS-platform
-title: The CoEDL corpus platform
+# The CoEDL corpus platform
 author: Tom Honeyman
 date: 2017-10-05
 tags:
@@ -14,7 +13,7 @@ CoEDL has a "proof-of-concept" corpus platform, currently restricted to corpus c
 This is a basic guide to the platform.
 <!--more-->
 
-# CoEDL corpus platform
+## CoEDL corpus platform
 
 The [preliminary corpus platform](http://go.coedl.net/corpora) is available, but currently limited to those with a password.
 

@@ -1,6 +1,5 @@
 ---
-permalink: correcting-spelling-in-chat-files
-title: Finding and correcting spelling in CHAT files
+# Finding and correcting spelling in CHAT files
 author: Sasha Wilmoth
 date: 2017-08-29
 tags:
@@ -14,7 +13,7 @@ categories:
     - Scripts
 ---
 
-# Introduction
+## Introduction
 The Gurindji Kriol corpus is glossed using the MOR command in CLAN, which looks up each token in the transcription tier, and adds a mor-code from the lexicon accordingly. In order to have a squeaky clean mor-tier, we need to ensure that each token is accounted for, and there are no typos in the transcription or new words to be added to the lexicon. At this stage, we can also fix any known misanalyses of common words or sequences (for example, *dat tu* should be *dat _tu*, as *_tu* is a dual suffix and not a numeral in this context).
 
 I have written two scripts to automate this process: one finds unknown tokens in the transcription tier and outputs a two-column file, the other corrects all CHAT files in a particular directory according to said two-column file.
@@ -23,7 +22,7 @@ The two-column checked words file is **cumulative** - once you correct a typo on
 
 The process is also **iterative**. You should always double check the corpus with the first script after running the second, to make sure you've caught everything.
 
-# Instructions
+## Instructions
 ## Requirements
 Both scripts require Python 2.x. They work on Mac and have not been tested on Windows.
 
@@ -54,6 +53,7 @@ yuwai {[scat interj]} "yuwai&k" =yes=
 zebra {[scat n:animal]} "zebra&k" =zebra=
 ```
 Don't worry if your syntax is slightly different - the script only looks at everything before the first space.
+
 #### Checked words file
 I started with a basic 'checked words' file that looked like this:
 
@@ -175,7 +175,7 @@ for file in */*/*.cha.corrected; do mv "$file" "`basename "$file" .cha.corrected
 
 This is looking for the corrected files in two nested subdirectories, and would be run from the 'Transcription' directory in the above screenshot.
 
-# Conventions
+## Conventions
 Please note that these scripts were developed for the Gurindji Kriol corpus, and as such take into account some specific conventions that may not apply to your data.
 
 
@@ -193,7 +193,7 @@ correctCHATSpelling.py will:
 - Remove a space before a comma.
 
 
-# Notes
+## Notes
 All the Gurindji Kriol data shown has been recorded by Felicity Meakins and Cassandra Algy.
 
 If you need help with this process or would like to request any changes (such as support for ELAN), please [get in touch](mailto:swilmoth@appen.com) and I'll be happy to help.

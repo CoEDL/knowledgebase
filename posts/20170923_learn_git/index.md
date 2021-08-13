@@ -1,6 +1,5 @@
 ---
-permalink: learn-git
-title: Introduction to Git
+# Introduction to Git
 author: Ben Foley, Nay San
 date: 2017-09-23
 updated: 2017-10-06
@@ -39,14 +38,14 @@ This is a beginner's guide to using Git version control with the SourceTree prog
 
 ---
 
-# What is git?
+## What is git?
 
 Git is a *version control* tool, a way to keep track of changes to files.
 
 Think about MS Word's Track Changes, but it's so much better. It's also better than copying files into folders with dates (or folder names like "final", "final2", "last-changes").
 
 
-# Why use version control?
+## Why use version control?
 
 Version control documents your changes to files, storing the date, time and author info as a "commit". When you save your changes you can describe the changes you made with a message. This version history is a valuable log, a reference which you can look back through to find the point at which data changed.
 
@@ -57,7 +56,7 @@ When your changes have been committed, they stay in that state (you can come bac
 It's a great way to work collaboratively. Many people can work on a project, each person can have a local copy of the project and work on their local version without affecting other people's copies. This also makes it useful for offline work. If you have a copy of a Git project on your computer, no network is needed to access a history of the project's changes because all the history is stored within the project. You can edit the project while offline and syncronise later when you have online access.
 
 
-# What does it look like?
+## What does it look like?
 
 A simple tree (or graph of commits) looks like this:
 
@@ -100,7 +99,7 @@ Git commands either add nodes to the graph or navigate through the graph. The gr
 Git repositories can be stored on your local computer and remotely on a server like github.com, gitlab.com or bitbucket.com. 
 
 
-# How do we use git?
+## How do we use git?
 
 The basic Git workflow goes something like this:
 
@@ -117,7 +116,7 @@ The basic Git workflow goes something like this:
 We'll do these soon...
 
 
-# Real-life linguist workflows
+## Real-life linguist workflows
 
 For a linguist working solo, a typical project might contain one remote repository, cloned to their computer. In this setup, it is common to only have one branch.
 
@@ -129,12 +128,12 @@ For larger (especially public) groups, the remote repository is forked by each c
 
 ---
 
-# Hands on 
+## Hands on 
 
-## Getting set up
+### Getting set up
 
 
-### Software
+#### Software
 
 For the rest of this guide, we'll use SourceTree to work with the Git repository, and VS Code to edit files.
 
@@ -157,7 +156,7 @@ For the rest of this guide, we'll use SourceTree to work with the Git repository
 
 
 
-### A sandbox
+#### A sandbox
 
 1. For today's play, make a folder somewhere easy to access, preferably without spaces in the path. For example (on mac), `~/Documents/learn-git`
 
@@ -172,7 +171,7 @@ For the rest of this guide, we'll use SourceTree to work with the Git repository
 3. Open the folder in Visual Studio. `File > Open` then select your `learn-git` folder.
 
 
-## First commit
+### First commit
 
 1. Let's add a file in the folder. Using VS Code, `File > New File` then name the new file `wordlist`. The file will open in the editor pane when it has been created. Type some words into the new file and save it.
 
@@ -191,7 +190,7 @@ For the rest of this guide, we'll use SourceTree to work with the Git repository
 8. Delete a word or two, save, add and commit.
 
 
-## History
+### History
 
 Now we have three commits in the repository. Looking at `Workspace > History` we can see a log of our changes. 
 
@@ -211,7 +210,7 @@ Select a commit to see which files were changed. Select a file from the bottom l
 
 ![File changes in History](history-file-changes.png)
 
-## Let's branch
+### Let's branch
 
 Branches are a handy way to organise your changes into logical groups. In software development, branches are often used to group changes according to the features they will bring to the project. The architecture of your repository's branches is referred to as a workflow. For corpus work, branches might help organise your changes according to particular processing activities. 
 
@@ -237,7 +236,7 @@ We'll make our next lot of changes on a new branch.
 
 
 
-## Remotes
+### Remotes
 
 To benefit from using Git as a collaboration tool, a copy of the repository needs to be accessible online. These remote repositories are typically hosted on github.com or gitlab.com. 
 
@@ -279,7 +278,7 @@ Remote repositories can be cloned locally, and changes can be pushed and pulled 
 9. After the push has happened, refresh the gitlab.com window to see that the files you added have been pushed to the remote repository.
 
 
-## Protecting branches
+### Protecting branches
 
 Writing directly to a remote's master branch is convenient, but in a collaborative project you might want more control over who can write to particular branches. A common workflow is to protect the master branch from pushes and require people to make changes on their own branches. These user-created branches can be pushed back to the remote repository and used to create a merge request (aka pull request). Merge requests are then checked and the changes can be merged into master or discarded by people with appropriate access permission.
 
@@ -310,7 +309,7 @@ And you can also tick `Squash commits when merge request is accepted` to combine
 If there are corrections to be made, make sure to push the changes to the same branch.
 
 
-## Dealing with merge conflicts
+### Dealing with merge conflicts
 
 Let's pair up for this activity.
 
@@ -371,7 +370,7 @@ Let's pair up for this activity.
 
 ---
 
-# Definitions/glossary
+## Definitions/glossary
 
 **Add**  
 Writes changes to a staging area. 
@@ -414,14 +413,14 @@ Preparing and organising a commit.
 A system that saves the history of changes to files.
 
 
-#### More definitions
+## More definitions
 
 - [More definitions from GitHub](https://help.github.com/articles/github-glossary)
 
 - [Git FAQs from GitTower](https://www.git-tower.com/learn/git/faq)
 
 
-# Further reading
+## Further reading
 
 [The seven rules of a great Git commit message](https://chris.beams.io/posts/git-commit/)
 

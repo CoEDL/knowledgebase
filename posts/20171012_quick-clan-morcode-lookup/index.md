@@ -1,6 +1,5 @@
 ---
-permalink: quick-clan-morcode-lookup
-title: Quick CLAN morcode lookup
+# Quick CLAN morcode lookup
 author: Sasha Wilmoth
 date: 2017-10-12
 tags:
@@ -13,7 +12,7 @@ categories:
     - Scripts
 ---
 
-# Introduction
+## Introduction
 
 Each utterance in the Gurindji Kriol corpus has a tier with morphological information for each token in the transcription tier. It looks like this (with the `\P` marking a pronominal subject):
 
@@ -42,7 +41,7 @@ As you can imagine, if you have to make any small corrections to the mor tier, i
 
 So, I wrote a little interactive script (printMorCodes.py) that looks them up for you.
 
-# Instructions
+## Instructions
 ## Requirements
 This script requires Python 2.x. It works on Mac and has not been tested on Windows
 

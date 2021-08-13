@@ -1,6 +1,5 @@
 ---
-permalink: nectar-setup
-title:  Set up Nectar
+#  Set up Nectar
 author: Nay San
 date: 2017-12-11
 tags:
@@ -11,9 +10,9 @@ categories:
     - Tutorials
 ---
 
-# Nectar setup
+## Nectar setup
 
-## About
+### About
 
 The primary purpose of this tutorial is to be referred from other tutorials making use of the Nectar system. Here I give a quick introduction to:
 

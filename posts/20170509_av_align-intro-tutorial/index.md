@@ -1,6 +1,5 @@
 ---
-permalink: av_align-intro-tutorial
-title: Automatic alignment of audio and video
+# Automatic alignment of audio and video
 author: Sasha Wilmoth, Ola Olsson
 date: 2017-05-09
 tags:
@@ -13,7 +12,7 @@ categories:
     - Tutorials
 ---
 
-# Introduction
+## Introduction
 av_align.py is a Python script designed to solve the problem of unaligned audio and video recordings of the same session. It calculates the most likely offset between two media files, and pads them accordingly. It also adjusts the timestamps of an ELAN or CLAN transcript if necessary.
 
 The script runs on Windows/Mac/Linux. We've created a Docker<sup>1</sup> container so there's minimal setup.
@@ -45,7 +44,7 @@ You can run the script with the following options:
 * `[-f FFMPEGPATH]` av_align.py uses [FFmpeg](https://ffmpeg.org/) to extract and pad the media files. FFmpeg is included in the Docker container, so this option isn't necessary unless you're running av_align.py on your own system, and FFmpeg is not on your system path.
 * `[-v]` Verbose - for troubleshooting.
 
-# Instructions
+## Instructions
 1. Download and install Docker [here](http://docker.com/).
 2. Move to the directory with your data and run the script:
 
@@ -68,7 +67,7 @@ If you're not a techy person and need some help setting up your workflow, feel f
 * When adjusting timestamps, it is assumed that these are in milliseconds. If you have set your annotations in ELAN to align with frames, proceed with caution.
 * The script loads both wave forms into memory. This shouldn't be a problem unless you're working with very long recordings (hours).
 
-# Acknowledgements
+## Acknowledgements
 av_align.py was written by Ola Olsson and tested by Sasha Wilmoth, on data collected by Felicity Meakins. Thanks to Nay San for setting up the Docker image.
 
 

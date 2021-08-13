@@ -1,6 +1,5 @@
 ---
-permalink: updating-elan-initials
-title: Updating initials in ELAN tiers
+# Updating initials in ELAN tiers
 author: Sasha Wilmoth
 date: 2017-06-01
 tags:
@@ -10,7 +9,7 @@ categories:
     - Scripts
     - Tutorials
 ---
-# Introduction
+## Introduction
 
 If you use speaker's initials in tier names in ELAN, you might need to update them occasionally. You can do this manually in ELAN by clicking Tier > Change Tier Attributes, and then typing in the new initials for every single tier.
 
@@ -20,13 +19,15 @@ The tiers look something like this:
 ![](Screen Shot 2017-05-31 at 3.14.12 pm.png)
 
 
-# changeSpeakerInitials.py
-## Requirements
+## changeSpeakerInitials.py
+
+### Requirements
+
 changeSpeakerInitials.py works with Python 2.7. It works on Mac, and has not been tested on Windows.
 
 The script can be found [here](https://gitlab.com/swilmoth/changeSpeakerInitials.py).
 
-## Instructions
+### Instructions
 
 Instead of manually changing each tier in each file to MM1 and MM2, we can make a two-column (tab-delimited) file like this:
 

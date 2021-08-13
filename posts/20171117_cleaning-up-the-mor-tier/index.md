@@ -1,6 +1,5 @@
 ---
-permalink: cleaning-up-the-mor-tier
-title:  Various scripts for cleaning up the mor tier (CLAN)
+#  Various scripts for cleaning up the mor tier (CLAN)
 author: Sasha Wilmoth
 date: 2017-11-17
 tags:
@@ -13,7 +12,7 @@ categories:
     - Scripts
 ---
 
-# Introduction
+## Introduction
 
 In this post, I'll introduce 8 (yes, eight) scripts for cleaning up the %mor tier in a CLAN corpus. Fair warning: this post is pretty technical and very long. But if you want a squeaky clean CLAN corpus, you've come to the right place.
 
@@ -46,9 +45,9 @@ I know it looks a bit crazy, but I promise works! See **splitFiles.py** for deta
 
 Note: the file shown in the screenshot would have used a different command, like `grep '' ../../GurindjiKriol/Old/*/*.cha`
 
-# morChecker.py
+## morChecker.py
 
-## Description
+### Description
 
 Disambiguating homographs on the mor tier is a pain. You can easily introduce heaps of errors, but it's almost impossible to find them. This script (by Simon Hammond), checks the consistency of mor-coding in similar contexts, to find errors such as a verb being coded as intransitive when it is followed by a transitive suffix (to mention a more straightforward example). This script looks at the mor-tier, and finds sequences of mor-codes of any given length, in which the forms are identical, but other information in the mor-codes differs. I run this script over all new data with different chosen lengths, and sort the output by frequency to find likely errors. The following table shows a small, selected excerpt of the output when searching for 4-grams:
 
@@ -77,10 +76,10 @@ Based on this, we can make a list of automated fixes to make across the whole co
 
 This process will not catch every coding error, but it goes a long way and gives a good overview of the data. For best results, I run the script several times with shorter n-gram lengths each time. Searching for shorter n-grams results in an overwhelming output, in which the majority of inconsistencies are legitimate differences. This is still the case for most of the 4-grams identified, but it’s possible to look through them and find likely errors. Searching for longer n-grams gives a better signal-to-noise ratio in the output (i.e. inconsistencies found when searching for 10-grams are much more likely to be errors), but a much smaller output.
 
-## Limitations
+### Limitations
 One limitation of this script is that it only looks at the citation form in the mor-code, and not the actual form that has been transcribed. Therefore, it won’t detect errors where *garra* was inconsistently coded as prep|garram&ASS&k=PROP when it should have been v:aux|garra&k=have, as the two citation forms are different. It does have one exception built in: the ergative and dative suffixes are treated as identical. They have two homophonous allomorphs (*\_ngku* and *\_tu*), but their citation forms are *\_tu* and *\_ku* respectively, so would not be found by the script. This exception was included because the changing case system is of particular interest and they are easily mis-coded. A future version of this script could take into account the transcription tier, and would be run after all these other cleaning up scripts are run.
 
-## Instructions
+### Instructions
 The arguments of this script are: the location of the .cha files, and the desired length of the n-gram (if no length is given, the default is 4). The script compares any files with a .cha extension in all subdirectories.
 
 ```
@@ -89,7 +88,7 @@ morChecker.py /path/to/your/corpus/ -n [a number of your choice]
 
 There's also an option for a simpler output (add `-s` to your command), which just prints POS information and not the full codes.
 
-# validateMorCodes.py
+## validateMorCodes.py
 This script is pretty simple - it checks that all the mor codes in your corpus are valid according to your lexicon(s). It ignores things that aren't in the lexicon, like punctuation and proper nouns. The script outputs a two-column file - you can correct the second column and automatically fix the corpus with correctMorCodes.py (below). If you've used this script before and already have a list of known incorrect mor-codes, use the `-c` option to ignore them. The lexicons should be in the .cut format, which looks like this:
 
 ```
@@ -133,7 +132,7 @@ v:tran|nok&k=hit_head          v:tran|nok&k=hit
 ```
 This file then becomes the input for...
 
-# correctMorCodes.py
+## correctMorCodes.py
 
 This script is also really simple. Apart from the corrected two-column file, the script allows two input options: the location of your corpus, or a giant text file containing the entire corpus. The command is:
 
@@ -153,7 +152,7 @@ for oldname in */*.correctmor; do   newname=`echo $oldname | sed -e 's/\.correct
 
 If your input was a giant text file, the output is just a new giant text file with corrections. Make sure to compare the differences before you split this up!
 
-# countTokens.py
+## countTokens.py
 
 In theory, the mor tier should have the same number of tokens as what's been transcribed. In practice, things go wrong all the time and checking this is a good way to find weird things you otherwise mightn't be able to find.
 
@@ -172,7 +171,7 @@ countTokens.py MyEntireCorpus.txt > missingTokens.txt
 ```
 The script ignores certain stuff that we expect to be missing - e.g. *xxx* for unintelligible speech, things like *&=laugh* or *&foreign &words*, etc. If you've already run insertPlaceholders.py (see below) and want to run countTokens.py again, add a `-p` to the command.
 
-# checkMorCodeMatches.py
+## checkMorCodeMatches.py
 After running the previous scripts, all the mor-codes match existing entries in the lexicon, and the transcription and mor tiers have the same amount of stuff on them. At this stage, we can check that every single token on the transcription tier actually matches up with its corresponding code. **Don't run this unless the output of countTokens.py is 0!**
 
 The inputs for this script are the .cut lexicon(s) and that giant text file. This script also ignores tokens like *xxx*, *&=laugh*, etc. The command is:
@@ -185,7 +184,7 @@ The output is a 3-column tab-delimited file for correction. The first column is 
 
 In the screenshot above, you can see some really minor differences (e.g. the lemma of *gu* should be *gon* when it's a minor verb), and some instances where the transcription was corrected but not the mor-code (someone must have heard *\_partak* at first, but changed that to *partiki* later). And some things that are just wrong, like *liar* has the mor-code for *yu*. This is actually a good way to find odd inconsistencies in the lexicon - fix any you find and run the script again. Once we're happy with the third column, we can correct these automatically with...
 
-# correctMismatches.py
+## correctMismatches.py
 
 This script corrects those mismatches according to our 3-column file. The input must be that giant text file. The command is simple:
 
@@ -196,7 +195,7 @@ The script will **only** make corrections when that particular mismatch occurs. 
 
 Because this script relies on the connection between the two tiers, make sure you have completely cleaned up any errors found with countTokens.py.
 
-# insertPlaceholders.py
+## insertPlaceholders.py
 So far, these scripts have been ignoring things that don't get added to the mor tier by CLAN, like *xxx*, *&=laugh*, *&foreign &words*, and *\[uncertain words\]*. But if we're converting to another format where the connection between each token on each tier needs to be explicit, or if we want to include them for the sake of accurate searching and analysis, then we need to include them on the mor tier.
 
 It turns this:
@@ -222,7 +221,7 @@ insertPlaceholders.py MyEntireCorpus.txt > MyEntireCorpus_placeholders.txt
 
 To ensure that the script inserts these placeholder tokens in the right spot, **only** run this script after you have run countTokens.py and checkMorCodeMatches.py, and the output of both is 0.
 
-# splitFiles.py
+## splitFiles.py
 
 After running the above scripts, we can be confident that every single mor code in the entire corpus is up to date with the lexicon, matches every single morph that has been transcribed, and is as clean and consistent as we can possibly make it. We just need to split up that giant text file and put each file back into place.
 
@@ -248,6 +247,6 @@ You can use the `-o` option in combination with the `--replace` option if the pa
 
 As you can see, the `../../` at the start indicates we ran the grep command from some other subdirectory, so I would either navigate to that directory, or refer to it with the `-o` option.
 
-# Acknowledgements
+## Acknowledgements
 
 All Gurindji Kriol data shown above has been collected by Felicity Meakins and Cassandra Algy. All scripts were written by me (Sasha Wilmoth), with the exception of morChecker.py (Simon Hammond) and splitFiles.py (Simon Hammond and Stephanie Soh). Many thanks for the support of Appen, in particular Simon Hammond and Jason Johnston for their help with Python.
