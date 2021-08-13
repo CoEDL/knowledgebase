@@ -1,14 +1,15 @@
----
 # excel2cha CLAN header generator
+
 author: Jonathon Taufatofua
 date: 2017-09-19
+
 tags:
     - CLAN
     - Excel
     - metadata
+
 categories:
     - Scripts
----
 
 Metadata is "data about data". Recording metadata is important for linguistic field work. When documenting language, the metadata contains information such as location, time, participant information, recording format, media filenames, etc. Metadata can provide information about the social context of a documentation activity and provide a locator for a resource once it enters a larger collection. 
 

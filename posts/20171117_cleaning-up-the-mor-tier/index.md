@@ -1,16 +1,17 @@
----
 #  Various scripts for cleaning up the mor tier (CLAN)
+
 author: Sasha Wilmoth
 date: 2017-11-17
+
 tags:
     - CLAN
     - CHAT
     - Gurindji Kriol
     - Python
     - Appen
+
 categories:
     - Scripts
----
 
 ## Introduction
 

@@ -1,16 +1,17 @@
----
 # Quick CLAN morcode lookup
+
 author: Sasha Wilmoth
 date: 2017-10-12
+
 tags:
     - Tutorial
     - CLAN
     - CHAT
     - Gurindji Kriol
     - Python
+
 categories:
     - Scripts
----
 
 ## Introduction
 

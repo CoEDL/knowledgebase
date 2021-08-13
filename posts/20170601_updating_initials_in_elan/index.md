@@ -1,14 +1,16 @@
----
 # Updating initials in ELAN tiers
+
 author: Sasha Wilmoth
 date: 2017-06-01
+
 tags:
     - Elan
     - Python
+
 categories:
     - Scripts
     - Tutorials
----
+
 ## Introduction
 
 If you use speaker's initials in tier names in ELAN, you might need to update them occasionally. You can do this manually in ELAN by clicking Tier > Change Tier Attributes, and then typing in the new initials for every single tier.

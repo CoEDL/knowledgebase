@@ -1,18 +1,20 @@
----
 # Automatic alignment of audio and video
+
 author: Sasha Wilmoth, Ola Olsson
 date: 2017-05-09
+
 tags:
     - CLAN
     - ELAN
     - Python
     - Docker
+
 categories:
     - Scripts
     - Tutorials
----
 
 ## Introduction
+
 av_align.py is a Python script designed to solve the problem of unaligned audio and video recordings of the same session. It calculates the most likely offset between two media files, and pads them accordingly. It also adjusts the timestamps of an ELAN or CLAN transcript if necessary.
 
 The script runs on Windows/Mac/Linux. We've created a Docker<sup>1</sup> container so there's minimal setup.

@@ -1,14 +1,15 @@
----
 # Introduction to Git
+
 author: Ben Foley, Nay San
 date: 2017-09-23
 updated: 2017-10-06
+
 tags:
     - Git
     - Version Control
+
 categories:
     - Tutorials
----
 
 This is a beginner's guide to using Git version control with the SourceTree program. 
 

@@ -1,14 +1,15 @@
----
 #  Set up Nectar
+
 author: Nay San
 date: 2017-12-11
+
 tags:
     - Nectar
     - SSH
     - Setup
+
 categories:
     - Tutorials
----
 
 ## Nectar setup
 

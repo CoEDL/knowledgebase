@@ -1,15 +1,16 @@
----
 # Quick automatic glossing in CLAN
+
 author: Sasha Wilmoth, Simon Hammond, Hannah Sarvasy
 date: 2017-05-30
+
 tags:
     - Glossing
     - CLAN
     - Python
     - Appen
+
 categories:
     - Scripts 
----
 
 ## Introduction
 Hannah Sarvasy is conducting a longitudinal study of five children acquiring the Papuan language Nungon in a remote village of Papua New Guinea. This entails monthly recordings of the target children that are conducted and transcribed by four Nungon-speaking assistants in the village. The corpus will total 104 hours of transcribed natural speech recordings. Hannah's task is to add interlinear morpheme-by-morpheme parses and glossing and free English translations to the Nungon transcriptions, which are in the CHAT format. The glossing is to be done 

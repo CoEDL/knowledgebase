@@ -1,7 +1,8 @@
----
 # Finding and correcting spelling in CHAT files
+
 author: Sasha Wilmoth
 date: 2017-08-29
+
 tags:
     - Tutorial
     - Spelling standardisation
@@ -9,9 +10,9 @@ tags:
     - CHAT
     - Gurindji Kriol
     - Python
+
 categories:
     - Scripts
----
 
 ## Introduction
 The Gurindji Kriol corpus is glossed using the MOR command in CLAN, which looks up each token in the transcription tier, and adds a mor-code from the lexicon accordingly. In order to have a squeaky clean mor-tier, we need to ensure that each token is accounted for, and there are no typos in the transcription or new words to be added to the lexicon. At this stage, we can also fix any known misanalyses of common words or sequences (for example, *dat tu* should be *dat _tu*, as *_tu* is a dual suffix and not a numeral in this context).

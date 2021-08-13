@@ -1,15 +1,16 @@
----
 # Finding and correcting glossing inconsistencies
+
 author: Sasha Wilmoth
 date: 2017-05-26
+
 tags:
     - Glossing
     - Flex
     - Python
     - Appen
+
 categories:
     - Tutorials
----
 
 ## Introduction
 The analysis of a language's grammar can evolve over time. So too can glossing preferences. How can one ensure that an entire corpus is glossed consistently, as the lexicon is continually updated?

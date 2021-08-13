@@ -1,12 +1,12 @@
----
 # The CoEDL corpus platform
+
 author: Tom Honeyman
 date: 2017-10-05
+
 tags:
     - ANNIS
     - corpora
     - transcripts
----
 
 CoEDL has a "proof-of-concept" corpus platform, currently restricted to corpus contributors. This is a project aimed at making textual materials more readily available to researchers.
 

@@ -1,13 +1,15 @@
----
 # Adding missing CV tier in ELAN
+
 author: Sasha Wilmoth
 date: 2017-08-24
+
 tags:
     - Elan
     - Python
+
 categories:
     - Tutorials
----
+
 ## Introduction
 
 Until the recent release of [ELAN 5.0](https://tla.mpi.nl/tools/tla-tools/elan/download/), it was not possible to automatically parse and gloss transcriptions in ELAN. A commonly used workaround is to export from ELAN into Toolbox, and import the interlinearised texts back into ELAN. In the process, some tiers might be altered.

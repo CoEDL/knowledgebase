@@ -1,15 +1,18 @@
----
 # Auto-Chunking Audio Files into Intonational Phrases
+
 author: T. Mark Ellison
 date: 2017-05-01
+
 tags:
     - Segmentation
     - Intonational Phrase
     - Silence
     - PRAAT
+
 categories:
     - Tips
----
+
+## Introduction
 
 [Eri Kashima](https://yammeringon.wordpress.com/) and I have found a neat way of chunking speech from the audio file, as a first step in transcription. Initial efforts using silence-detection in ELAN were not successful. Instead, we found that PRAAT's silence detection did the job quite well once the right parameters were chosen.
 
