@@ -15,7 +15,7 @@ categories:
 
 ## Introduction
 
-av_align.py is a Python script designed to solve the problem of unaligned audio and video recordings of the same session. It calculates the most likely offset between two media files, and pads them accordingly. It also adjusts the timestamps of an ELAN or CLAN transcript if necessary.
+[av_align.py](av_align.py) is a Python script designed to solve the problem of unaligned audio and video recordings of the same session. It calculates the most likely offset between two media files, and pads them accordingly. It also adjusts the timestamps of an ELAN or CLAN transcript if necessary.
 
 The script runs on Windows/Mac/Linux. We've created a Docker<sup>1</sup> container so there's minimal setup.
 
@@ -49,11 +49,11 @@ You can run the script with the following options:
 ## Instructions
 1. Download and install Docker [here](http://docker.com/).
 2. Move to the directory with your data and run the script:
-
-   ```
+```
 cd /path/to/your/corpus/
 docker run --rm -v $(pwd):/to_align coedl/av_align python /av_align.py -d /to_align/Session001
-   ```
+```
+
 `$(pwd)` means present working directory, `/to_align` is what your corpus will be called when mounted onto the image.
 
 You can see these steps in action here:
