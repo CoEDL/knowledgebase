@@ -30,11 +30,12 @@ The input is a directory containing:
 
 ### Output
 If the audio starts before the video, the script will output an extended version of the video, with grey frames at the beginning. A temporary folder is also created containing the audio files used by the script.
-![Example of script output - extended video](Screen Shot 2017-05-04 at 11.26.15 am.png)
+
+![Example of script output - extended video](output-1.png)
 
 If the video starts before the audio, the script will output an extended version of the audio, with silence at the beginning, as well as a time-adjusted transcript. **The transcript is assumed to be time-aligned to the audio file.**
 
-![Example of script output - extended audio](Screen Shot 2017-05-04 at 12.15.19 pm.png)
+![Example of script output - extended audio](output-2.png)
 
 ### Options
 
